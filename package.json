@@ -1,0 +1,23 @@
+{
+  "name": "lunchScraper",
+  "version": "0.0.1",
+  "description": "A web scraper for lunch (tasty)",
+  "main": "index.js",
+  "author": "Matyáš Teplý",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^22.10.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "tsx": "^4.11.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsup src/index.ts --minify"
+  }
+}
