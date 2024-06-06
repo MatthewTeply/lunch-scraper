@@ -68,17 +68,17 @@ const displayTextItems = async (restaurants: (Restaurant | null)[], displayIndex
             return;
         }
 
-        outputText += `\n# ${restaurant.name}`;
+        outputText += `\n## ${restaurant.name}`;
 
         restaurant.items.map(item => {
             outputText += '\n- ';
 
             if (item.mealType === MealType.SOUP) {
-                outputText += '**🍲 Polévka:** ';
+                outputText += '**Polévka:** ';
             }
 
             if (item.mealType === MealType.DESSERT) {
-                outputText += '**🧁 Dezert:** ';
+                outputText += '**Dezert:** ';
             }
 
             outputText += `${item.name}`;
