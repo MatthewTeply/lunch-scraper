@@ -48,7 +48,7 @@ const getMenuItems = async (menu: ElementHandle): Promise<MenuItem[]> => {
 
                 menuItems[menuItemIndex] = {
                     name: '',
-                    price: '',
+                    price: null,
                     mealType,
                 }
             }

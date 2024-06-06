@@ -6,7 +6,7 @@ export enum MealType {
 
 export type MenuItem = {
     name: string,
-    price: string,
+    price: string | null,
     mealType: MealType,
 }
 

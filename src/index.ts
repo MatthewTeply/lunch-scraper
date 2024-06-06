@@ -2,6 +2,7 @@ import { Client } from 'discord.js';
 import { deployCommands } from './deployCommands';
 import { commands } from './commands';
 import { config } from './config';
+import { scraperPivo } from './scrapers/pivo';
 
 const client = new Client({
     intents: ['Guilds', 'GuildMessages', 'DirectMessages'],
@@ -23,7 +24,7 @@ client.on('interactionCreate', async (interaction) => {
     const { commandName } = interaction;
 
     if (commands[commandName as keyof typeof commands]) {
-        commands[commandName as keyof typeof commands].execute(interaction);
+        commands[commandName as keyof typeof commands].execute(interaction, client);
     }
 });
 
